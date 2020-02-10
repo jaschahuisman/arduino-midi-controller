@@ -19,6 +19,7 @@
 7. [File downloads](#file-downloads)
 
 ## About this project
+*Content will be added soon...*
 
 *[▲ Back to top ▲](#arduino-midi-controller)*
 
@@ -243,7 +244,7 @@ Data bytes are being used to send data of parameters from the status byte. A max
 *[▲ Back to top ▲](#arduino-midi-controller)*
 
 ## Design
-Will be added soon...
+*Content will be added soon...*
 
 ## File downloads
-Will be added soon...
+*Content will be added soon...*

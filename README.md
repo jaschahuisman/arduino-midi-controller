@@ -45,7 +45,7 @@ The female midi connector has 5 pins. We only use pin 4, 2 and 5. (Note that the
 * Connect pin 2 to ground.
 * Connect pin 5 to a 220 Ohm resistor, to Arduino's pin 1 (TXD).
 
-<img src="" alt="Circuit – 2x2 button matrix" width="500"/>
+<img src="https://github.com/jaschahuisman/arduino-midi-controller/blob/master/Circuits/Circuit_Midi_Socket.png?raw=true" alt="Circuit – Midi Socket" width="500"/>
 
 ### Button matrix circuit
 The button matrix seems a bit more complicated. Never connect anything to pin 13, because it's pullup input does not work well. The rows are being used as outputs, the columns as pullup inputs. Make sure to ground the columns with a diode, so that they don't interconnect with each other. This will prevent errors.
@@ -54,7 +54,7 @@ The formula for the amount of on-board pins you need is: `(cols + rows)`. The fo
 
 The following image shows a simple 2x2 matrix circuit diagram using on-board pins 2-5:
 
-<img src="" alt="Circuit – 2x2 button matrix" width="500"/>
+<img src="https://github.com/jaschahuisman/arduino-midi-controller/blob/master/Circuits/Circuit_Button_Matrix_2x2_Grounded.png?raw=true" alt="Circuit – 2x2 button matrix" width="500"/>
 
 *[▲ Back to top ▲](#arduino-midi-controller)*
 
@@ -215,6 +215,8 @@ Data bytes are being used to send data of parameters from the status byte. A max
 | Velocity            | Velocity/Dynamics | 0 – 127 / Silent – Forte Fortissimo |
 
 #### List of midi keys
+[Searchable CSV dataset file](./Datasets/Dataset_Midi_Keys.csv)  
+
 | DEC | HEX | NOTE |  | DEC | HEX | NOTE |  | DEC | HEX | NOTE |  | DEC | HEX | NOTE |  | DEC | HEX | NOTE |  | DEC | HEX | NOTE |
 |-----|-----|------|---|-----|-----|------|---|-----|-----|------|---|-----|-----|------|---|-----|-----|------|---|-----|-----|------|
 | 0 | 00 | C-1 |  | 21 | 15 | A0 |  | 42 | 2A | F#2 |  | 63 | 3F | D#4 |  | 84 | 54 | C6 |  | 105 | 69 | A7 |
@@ -240,6 +242,8 @@ Data bytes are being used to send data of parameters from the status byte. A max
 | 20 | 14 | G#0 |  | 41 | 29 | F2 |  | 62 | 3E | D4 |  | 83 | 53 | B5 |  | 104 | 68 | G#7 |  | 125 | 7D | F9 |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 126 | 7E | F#9 |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 127 | 7F | G9 |
+
+[Searchable CSV dataset file](./Datasets/Dataset_Midi_Keys.csv)  
 
 *[▲ Back to top ▲](#arduino-midi-controller)*
 

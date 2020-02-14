@@ -10,7 +10,7 @@
     + [Midi connector code](#midi-connector-code)
     + [Button matrix code](#button-matrix-code)
 5. [Midi communication](#midi-communication)
-    + [Hexadecimal en/decoding](#hexadecimal-en-decoding)
+    + [Hexadecimal encoding](#hexadecimal-encoding)
     + [Midi send commands](#midi-send-commands)
     + [Status byte](#status-byte)
     + [Data byte](#data-byte)
@@ -62,7 +62,7 @@ The following image shows a simple 2x2 matrix circuit diagram using on-board pin
 ### Midi connector code
 Use the simple midi send script below to send midi commands to the midi output. Note that no midi pin setup is necessary because all `Serial.write()' commands will output to pin 1 (TXD). To learn more about midi communication check:
 5. [Midi communication](#midi-communication)
-  + [Hexadecimal en/decoding](#hexadecimal-en-decoding)
+  + [Hexadecimal encoding](#hexadecimal-encoding)
   + [Midi send commands](#midi-send-commands)
   + [Status byte](#status-byte)
   + [Data byte](#data-byte)
@@ -164,7 +164,7 @@ Midi is transmitted trough a – you guessed it – midi cable. The cable connec
 
 A midi controller sends 3 commands, notated in bytes: midi action (status byte), parameter 1 (data byte), parameter 2 (data byte). These bytes can be written down in binary, decimal, or hexadecimal.
 
-### Hexadecimal en/decoding
+### Hexadecimal encoding
 In this project we're working with hexadecimal numbers, because they are easier to read than binary. Although decimal numbers are quite readable, I use hexadecimal values because it makes the command and midi channel of the [status byte](#status-byte) visible immediately. In the table below you can see each number from 1 to 16 is represented by its hexadecimal number from 0 to F. For decimal numbers above 15 the first digit of the hexadecimal number changes to the next decimal number, so for example: 17 (dec) is 11 in hexadecimal numbers. After 0F (15) comes 10 (16) and after 10 comes 11 (17), etc. If this seems complicated you can always use [a converter tool](https://www.rapidtables.com/convert/number/hex-to-decimal.html).
 
 | Number             	| 0 	| 1 	| 2 	| 3 	| 4 	| 5 	| 6 	| 7 	| 8 	| 9 	| 10 	| 11 	| 12 	| 13 	| 14 	| 15 	|

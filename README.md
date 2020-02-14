@@ -10,7 +10,7 @@
     + [Midi connector code](#midi-connector-code)
     + [Button matrix code](#button-matrix-code)
 5. [Midi communication](#midi-communication)
-    + [Hexadecimal en/decoding](#hexadecimal-en/decoding)
+    + [Hexadecimal en/decoding](#hexadecimal-en-decoding)
     + [Midi send commands](#midi-send-commands)
     + [Status byte](#status-byte)
     + [Data byte](#data-byte)
@@ -62,7 +62,7 @@ The following image shows a simple 2x2 matrix circuit diagram using on-board pin
 ### Midi connector code
 Use the simple midi send script below to send midi commands to the midi output. Note that no midi pin setup is necessary because all `Serial.write()' commands will output to pin 1 (TXD). To learn more about midi communication check:
 5. [Midi communication](#midi-communication)
-  + [Hexadecimal en/decoding](#hexadecimal-en/decoding)
+  + [Hexadecimal en/decoding](#hexadecimal-en-decoding)
   + [Midi send commands](#midi-send-commands)
   + [Status byte](#status-byte)
   + [Data byte](#data-byte)
